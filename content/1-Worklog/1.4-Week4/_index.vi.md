@@ -4,55 +4,39 @@ weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+Mục tiêu tuần 4:
+- Tìm hiểu về dịch vụ Networking của AWS, đặc biệt là Amazon VPC
+- Thực hành tạo và cấu hình VPC cơ bản
+- Tìm hiểu về Database services và RDS
 
-### Mục tiêu tuần 4:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |
+|------|----------|--------------|---------------|-------------------|
+| 1 | Tìm hiểu về Amazon VPC:<br>- Khái niệm VPC, Subnet<br>- Internet Gateway và Route Table<br>- Security Groups vs NACLs | 29/9/2025 | 29/9/2025 | AWS Documentation, CloudJourney |
+| 2 | Thực hành tạo VPC:<br>- Tạo custom VPC<br>- Cấu hình public và private subnet<br>- Gắn Internet Gateway | 30/9/2025 | 1/10/2025 | AWS Console |
+| 3 | Tìm hiểu Amazon RDS:<br>- Các loại database engine<br>- Multi-AZ và Read Replica<br>- Backup và Security | 2/10/2025 | 2/10/2025 | AWS Documentation |
+| 4 | Kết nối EC2 với RDS:<br>- Launch EC2 trong VPC<br>- Tạo RDS instance<br>- Cấu hình security group để kết nối | 3/10/2025 | 3/10/2025 | AWS Console |
+| 5 | Làm việc nhóm:<br>- Chia sẻ kiến thức đã học<br>- Thảo luận về tiến độ dự án<br>- Planning cho tuần tiếp theo | 4/10/2025 | 5/10/2025 | Team meeting |
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+Thành tích tuần 4:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+• Có kiến thức cơ bản về Amazon VPC:
 
+  - Tạo public và private subnet
+  - Biết cách cấu hình routing và security
 
-### Kết quả đạt được tuần 4:
+• Có kiến thức cơ bản về Amazon RDS:
+  - Nắm được khái niệm Multi-AZ và Read Replica
+  - Biết cách backup và bảo mật database
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+• Thực hành thành công:
+  - Tạo VPC với multiple subnets
+  - Kết nối EC2 với RDS trong VPC
+  - Cấu hình security groups phù hợp
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+• Kỹ năng làm việc nhóm:
+  - Chia sẻ kiến thức hiệu quả với teammates
+  - Đóng góp ý kiến cho project planning
+  - Hỗ trợ các thành viên khác trong nhóm
 
 

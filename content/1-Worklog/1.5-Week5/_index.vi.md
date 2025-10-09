@@ -4,55 +4,34 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+Mục tiêu tuần 5:
+- Bắt đầu học cách dịch và viết blog kỹ thuật về AWS
+- Tìm hiểu về các dịch vụ Security và Monitoring của AWS
+- Thực hành với CloudWatch và IAM
 
-### Mục tiêu tuần 5:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |
+|------|----------|--------------|---------------|-------------------|
+| 1 | Tìm hiểu AWS IAM:<br>- Users, Groups, Roles<br>- Policies và Permissions<br>- Best practices for IAM | 6/10/2025 | 6/10/2025 | AWS Documentation, CloudJourney |
+| 2 | Thực hành với IAM:<br>- Tạo users và groups<br>- Gán policies<br>- Thực hành với roles | 7/10/2025 | 7/10/2025 | AWS Console |
+| 3 | Tìm hiểu Amazon CloudWatch:<br>- Metrics và Logs<br>- Alarms và Notifications<br>- Monitoring EC2 và RDS | 8/10/2025 | 8/10/2025 | AWS Documentation |
+| 4 | Bắt đầu dịch blog đầu tiên:<br>- Chọn blog AWS phù hợp (cơ bản)<br>- Dịch 50% nội dung<br>- Review với mentor | 9/10/2025 | 9/10/2025 | AWS Blog, Mentor guidance |
+| 5 | Làm việc nhóm và hoàn thiện:<br>- Chia sẻ tiến độ dịch blog<br>- Hoàn thiện bài dịch<br>- Planning cho workshop | 10/10/2025 | 12/10/2025 | Team collaboration |
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+Thành tích tuần 5:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+• Có kiến thức về AWS IAM:
+  - Hiểu cách quản lý users, groups và roles
+  - Biết cách tạo và gán policies
 
+• Phát triển kỹ năng dịch thuật:
+  - Hoàn thành bài dịch blog đầu tiên
+  - Học cách dịch thuật ngữ kỹ thuật AWS
+  - Cải thiện khả năng viết technical content
 
-### Kết quả đạt được tuần 5:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+• Kỹ năng làm việc nhóm:
+  - Chia sẻ kinh nghiệm dịch blog với team
+  - Nhận feedback và cải thiện
+  - Đóng góp vào planning workshop
 
 
