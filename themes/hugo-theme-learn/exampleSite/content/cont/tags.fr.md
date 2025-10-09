@@ -1,5 +1,4 @@
 ---
-date: 2018-11-29T08:41:44+01:00
 title: Tags
 weight: 40
 tags: ["documentation", "tutorial"]
@@ -13,7 +12,6 @@ Il suffit d'ajouter un tableau de tags sur la page :
 
 ```markdown
 ---
-date: 2018-11-29T08:41:44+01:00
 title: Tutoriel pour le thème
 weight: 15
 tags: ["tutoriel", "theme"]
