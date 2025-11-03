@@ -11,46 +11,27 @@ pre: " <b> 1.11. </b> "
 
 ### Week 11 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn Infrastructure as Code (IaC) basics and practice with CloudFormation and Terraform.
+* Automate the creation of a small, repeatable stack that includes networking, compute, and storage.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Read CloudFormation basics and review example templates; identify resources to include in a simple stack (VPC + EC2).                                                                               | 17/11/2025 | 17/11/2025      | CloudFormation docs                        |
+| 3   | - Author a CloudFormation template to create a VPC, public subnet and an EC2 instance; validate the template with cfn-lint or the console.                                                           | 18/11/2025 | 18/11/2025      | CFN template examples                      |
+| 4   | - Install Terraform locally; write initial Terraform configuration (provider, VPC, EC2) and plan the deployment; compare with CloudFormation approach.                                               | 19/11/2025 | 19/11/2025      | Terraform docs                             |
+| 5   | - Modularize Terraform: create a small module for EC2 (variables for AMI, instance type, security group) and use tfstate to track resources.                                                        | 20/11/2025 | 20/11/2025      | Terraform modules guide                    |
+| 6   | - Test stack teardown for both CloudFormation and Terraform; ensure orphan resources (EBS volumes, Elastic IPs) are removed; document differences in workflow.                                       | 21/11/2025 | 21/11/2025      | IaC teardown best practices                |
 
 
 ### Week 11 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Learned CloudFormation basics and authored a template to create a VPC, public subnet, and an EC2 instance.
 
-* Successfully created and configured an AWS Free Tier account.
+* Installed Terraform and used it to provision the same small stack, comparing workflow differences and state handling.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Implemented parameterization and small modules to make IaC reusable and documented the deployment steps.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Verified proper teardown by destroying stacks and ensuring resources (EBS volumes, elastic IPs) were cleaned up.
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Next steps: apply IaC to the final mini-project and prepare a short demo of automated deployment.

@@ -11,48 +11,29 @@ pre: " <b> 1.11. </b> "
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu Infrastructure as Code (IaC) cơ bản và thực hành với CloudFormation và Terraform.
+* Tự động hóa việc tạo một stack nhỏ bao gồm networking, compute và storage.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Đọc về CloudFormation và xem ví dụ template; xác định các tài nguyên sẽ đưa vào stack đơn giản (VPC + EC2).                                                                             | 17/11/2025   | 17/11/2025      | CloudFormation docs                        |
+| 3   | - Viết CloudFormation template để tạo VPC, public subnet và EC2; validate template bằng cfn-lint hoặc console.                                                                             | 18/11/2025   | 18/11/2025      | CFN template examples                      |
+| 4   | - Cài Terraform; viết cấu hình Terraform ban đầu (provider, VPC, EC2) và chạy plan để so sánh workflow với CloudFormation.                                                                  | 19/11/2025   | 19/11/2025      | Terraform docs                             |
+| 5   | - Modularize Terraform: tạo module nhỏ cho EC2 (biến cho AMI, instance type, security group) và sử dụng tfstate để theo dõi tài nguyên.                                                     | 20/11/2025   | 20/11/2025      | Terraform modules guide                    |
+| 6   | - Thử huỷ stack cho cả CloudFormation và Terraform; đảm bảo không còn tài nguyên thừa (EBS, Elastic IP); ghi lại khác biệt của hai công cụ.                                               | 21/11/2025   | 21/11/2025      | IaC teardown best practices                |
 
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Nắm được các khái niệm cơ bản của CloudFormation và viết template để tạo VPC, public subnet và EC2 instance.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Cài đặt và sử dụng Terraform để provision lại cùng stack, so sánh cách quản lý state và workflow.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tham số hoá template và viết module nhỏ để tái sử dụng IaC; ghi lại quy trình triển khai.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Thực hành huỷ stack và xác minh tài nguyên (EBS, Elastic IP) được dọn sạch.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Ghi chú: áp dụng IaC cho bài mini-project cuối khóa.
 
 

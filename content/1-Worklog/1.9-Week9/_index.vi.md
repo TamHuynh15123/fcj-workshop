@@ -11,48 +11,29 @@ pre: " <b> 1.9. </b> "
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu các dịch vụ cơ sở dữ liệu của AWS (RDS, Aurora, DynamoDB) và chiến lược backup.
+* Triển khai cơ sở dữ liệu quản lý và kết nối an toàn từ host ứng dụng.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Nghiên cứu các dịch vụ database quản lý (RDS, DynamoDB), so sánh use-case và best practices.                                                                                              | 03/11/2025   | 03/11/2025      | RDS docs, DynamoDB docs                    |
+| 3   | - Tạo RDS subnet group và parameter group; khởi tạo RDS (MySQL) trong private subnet (Multi-AZ tắt để tiết kiệm chi phí).                                                                  | 04/11/2025   | 04/11/2025      | RDS launch guide                           |
+| 4   | - Cấu hình security group để chỉ cho phép traffic tới DB từ EC2 ứng dụng; kiểm tra kết nối DB từ EC2/bastion và chạy một vài query test.                                                  | 05/11/2025   | 05/11/2025      | RDS connection docs                        |
+| 5   | - Tìm hiểu DynamoDB: tạo bảng mẫu, thử nghiệm CRUD, so sánh chế độ on-demand vs provisioned.                                                                                              | 06/11/2025   | 06/11/2025      | DynamoDB docs                              |
+| 6   | - Thiết lập snapshot tự động cho RDS; thực hành restore snapshot sang instance mới; ghi nhận chiến lược retention và lựa chọn cross-region.                                                  | 07/11/2025   | 07/11/2025      | Backup & snapshot docs                     |
 
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Triển khai Amazon RDS (MySQL) trong private subnet và xác thực kết nối an toàn từ EC2.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Thử nghiệm DynamoDB cho trường hợp key-value và so sánh hai chế độ provisioned vs on-demand.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Cấu hình snapshot tự động cho RDS và thực hành phục hồi point-in-time.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Đánh giá các lựa chọn sao lưu, bao gồm cross-region copy và chi phí liên quan.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Ghi chú: tiếp tục cấu hình giám sát và cảnh báo cho DB bằng CloudWatch.
 
 

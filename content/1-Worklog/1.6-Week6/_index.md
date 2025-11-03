@@ -11,46 +11,38 @@ pre: " <b> 1.6. </b> "
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Onboard with the First Cloud Journey team and understand internship expectations.
+* Learn AWS fundamentals: core service categories, account setup, Console and AWS CLI usage.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Onboarding meeting with mentor and team; read internship rules; set communication channels (Slack/Email).                                                                                             | 13/10/2025 | 13/10/2025      | internal docs                              |
+| 3   | - Study AWS service categories (Compute, Storage, Networking, Database). Take notes and map services to use-cases; review CloudJourney modules.                                                           | 14/10/2025 | 14/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Create AWS Free Tier account; enable MFA on root; create an IAM admin user; install & configure AWS CLI; verify aws sts get-caller-identity.                                                          | 15/10/2025 | 15/10/2025      | AWS Console, AWS CLI docs                  |
+| 5   | - Learn EC2 components: AMIs, instance types, EBS, key pairs, security groups. Prepare key-pair and security-group rules for SSH (port 22).                                                           | 16/10/2025 | 16/10/2025      | EC2 docs                                   |
+| 6   | - Launch a t2.micro EC2 instance (Amazon Linux/Ubuntu), connect via SSH, attach an additional EBS volume, format & mount it; create snapshot for practice.                                            | 17/10/2025 | 17/10/2025      | EC2/EBS docs                               |
 
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Gained a clear understanding of AWS core service groups and their use-cases:
+  * Compute (EC2, Lambda)
+  * Storage (S3, EBS)
+  * Networking (VPC, Subnet, Route)
+  * Database (RDS, DynamoDB)
 
-* Successfully created and configured an AWS Free Tier account.
+* Created and secured an AWS Free Tier account, including enabling MFA and creating an initial IAM user.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Navigated the AWS Management Console and located core services.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Installed and configured the AWS CLI (access key, secret key, default region, output format).
 
-* Used AWS CLI to perform basic operations such as:
+* Performed basic CLI operations:
+  * aws sts get-caller-identity
+  * aws ec2 describe-instances
+  * aws s3 ls
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Launched an EC2 instance, connected via SSH, and attached an EBS volume for practice.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Next steps: practice with S3 and IAM, and save CLI snippets for repeatable tasks.

@@ -11,46 +11,27 @@ pre: " <b> 1.12. </b> "
 
 ### Week 12 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Deliver the final mini-project: integrate core services into a small, documented architecture.
+* Perform cleanup, document learned skills, and reflect on improvements and next learning steps.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Finalize mini-project architecture and create a deployment checklist; draw architecture diagram and list IaC responsibilities.                                                                      | 24/11/2025 | 24/11/2025      | Project notes                              |
+| 3   | - Implement IaC templates (Terraform or CloudFormation) for final stack components: VPC, subnets, EC2, RDS, S3; parameterize inputs for reuse.                                                       | 25/11/2025 | 25/11/2025      | IaC templates                              |
+| 4   | - Deploy the final stack in a test account/environment; run smoke tests for application connectivity and data flow.                                                                                    | 26/11/2025 | 26/11/2025      | Deployment logs                             |
+| 5   | - Add monitoring and alarms for core components; prepare README with deployment and rollback steps; seed database with sample data if needed.                                                           | 27/11/2025 | 27/11/2025      | README, CloudWatch config                   |
+| 6   | - Cleanup temporary resources (test buckets, instances, temporary IAM keys); finalize deliverables: IaC templates, architecture diagram, and demo notes.                                              | 28/11/2025 | 28/11/2025      | Project deliverables                        |
 
 
 ### Week 12 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Completed a final mini-project that combined S3 (static content), an EC2 application host, and an RDS database behind a private subnet.
 
-* Successfully created and configured an AWS Free Tier account.
+* Automated deployment steps with Terraform/CloudFormation scripts and included a README with usage instructions.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Performed resource cleanup: deleted test buckets/instances, revoked temporary IAM keys, and removed unused snapshots.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Prepared a short reflection on lessons learned, challenges faced, and next steps (e.g., containerization, CI/CD, security hardening).
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Final deliverables: IaC templates, architecture diagram, and a short demo recording (links saved to project notes).

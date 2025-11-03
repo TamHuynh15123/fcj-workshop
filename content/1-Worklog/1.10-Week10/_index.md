@@ -11,46 +11,29 @@ pre: " <b> 1.10. </b> "
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn monitoring and auditing with CloudWatch and CloudTrail.
+* Understand IAM roles for services and create least-privilege policies for automation.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Read CloudWatch fundamentals and CloudTrail overview; plan which resources to monitor.                                                                                                              | 10/11/2025 | 10/11/2025      | CloudWatch & CloudTrail docs               |
+| 3   | - Install and configure the CloudWatch Agent on EC2; collect system and application metrics (CPU, memory, disk).                                                                                      | 11/11/2025 | 11/11/2025      | CloudWatch agent guide                     |
+| 4   | - Create CloudWatch dashboards with widgets for EC2 and RDS metrics; add custom metric graphs for application counters.                                                                                | 12/11/2025 | 12/11/2025      | CloudWatch dashboards docs                 |
+| 5   | - Define CloudWatch alarms (CPU, memory via agent, disk) and create an SNS topic for notifications; test alarm triggering.                                                                             | 13/11/2025 | 13/11/2025      | CloudWatch Alarms & SNS docs               |
+| 6   | - Enable CloudTrail for the account, configure trail to S3, validate events for console and API activity; review logs and identify suspicious events (if any).                                        | 14/11/2025 | 14/11/2025      | CloudTrail docs                            |
 
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Set up CloudWatch metrics and dashboards to monitor EC2, RDS, and custom application metrics.
 
-* Successfully created and configured an AWS Free Tier account.
+* Defined CloudWatch Alarms for CPU, memory (via agent), and disk usage and configured SNS notifications.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Enabled CloudTrail in the account to capture API activity and validated logs in an S3 bucket.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Created IAM roles for EC2 instances and a role for automated deployment tasks with scoped permissions.
 
-* Used AWS CLI to perform basic operations such as:
+* Wrote and tested a basic policy for an S3 read-only role and iterated on permissions to follow least-privilege.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Next steps: explore Infrastructure-as-Code to codify these resources.

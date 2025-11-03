@@ -11,46 +11,29 @@ pre: " <b> 1.8. </b> "
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn AWS networking: VPC, subnets, routing, Internet Gateway, NAT, Security Groups and NACLs.
+* Deploy networked resources and practice secure connectivity patterns.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Design VPC CIDR and subnet plan (public/private); document CIDR choices and rationale.                                                                                                                | 27/10/2025 | 27/10/2025      | VPC docs                                    |
+| 3   | - Create VPC with public and private subnets; configure route tables and attach an Internet Gateway for public subnet.                                                                                 | 28/10/2025 | 28/10/2025      | VPC guide                                   |
+| 4   | - Create private subnet components and a NAT Gateway (or NAT instance); test outbound connectivity from private instances.                                                                               | 29/10/2025 | 29/10/2025      | NAT docs                                    |
+| 5   | - Design and apply Security Groups and Network ACLs; create rules to allow only necessary traffic (SSH via bastion, HTTP/HTTPS, DB ports).                                                              | 30/10/2025 | 30/10/2025      | Security groups docs                        |
+| 6   | - Deploy a bastion host in the public subnet; test SSH proxy to private EC2; capture a simple network diagram and troubleshooting notes.                                                               | 31/10/2025 | 31/10/2025      | VPC/SSH best practices                      |
 
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Designed and created a VPC with public and private subnets, configured route tables and an Internet Gateway.
 
-* Successfully created and configured an AWS Free Tier account.
+* Launched EC2 instances in public and private subnets and tested connectivity through a bastion/SSH proxy.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Configured Security Groups and Network ACLs to restrict traffic according to least-privilege principles.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Implemented a NAT gateway pattern to allow private instances to access the internet for updates.
 
-* Used AWS CLI to perform basic operations such as:
+* Documented VPC diagrams, CIDR choices, and common troubleshooting commands (e.g., traceroute, curl, iptables checks).
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Next steps: explore managed database services and backups.

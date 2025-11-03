@@ -10,48 +10,29 @@ pre: " <b> 1.12 </b> "
 
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thành mini-project: tích hợp các dịch vụ cốt lõi thành một kiến trúc nhỏ có tài liệu.
+* Thực hiện dọn dẹp tài nguyên, tổng kết kiến thức đã học và chuẩn bị báo cáo/giới thiệu.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Hoàn thiện sơ đồ kiến trúc mini-project và checklist triển khai; chuẩn bị phân công IaC.                                                                                                 | 24/11/2025   | 24/11/2025      | Project notes                              |
+| 3   | - Viết template IaC (Terraform/CloudFormation) cho các thành phần: VPC, subnet, EC2, RDS, S3; tham số hoá để tái sử dụng.                                                                 | 25/11/2025   | 25/11/2025      | IaC templates                              |
+| 4   | - Triển khai stack thử nghiệm; chạy smoke tests để kiểm tra kết nối giữa các thành phần và luồng dữ liệu.                                                                                  | 26/11/2025   | 26/11/2025      | Deployment logs                             |
+| 5   | - Thiết lập giám sát và cảnh báo cho các thành phần chính; viết README hướng dẫn deploy/rollback; nếu cần seed DB thì thực hiện.                                                            | 27/11/2025   | 27/11/2025      | README, CloudWatch config                   |
+| 6   | - Dọn dẹp tài nguyên tạm (buckets thử nghiệm, instances, access key tạm); hoàn thiện deliverables: IaC templates, sơ đồ kiến trúc, ghi chú demo.                                         | 28/11/2025   | 28/11/2025      | Project deliverables                        |
 
 
 ### Kết quả đạt được tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hoàn thành mini-project: tích hợp S3 (static content), EC2 (ứng dụng) và RDS (database) trong private subnet.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Viết script và template IaC (Terraform/CloudFormation) để tự động hóa triển khai; thêm README hướng dẫn.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Thực hiện cleanup tài nguyên: xóa bucket thử nghiệm, instance tạm, thu hồi access key và xóa snapshot không cần thiết.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Soạn phần tổng kết: bài học chính, khó khăn gặp phải và hướng học tiếp (containerization, CI/CD, hardening).
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Bản giao nộp: IaC templates, sơ đồ kiến trúc và ghi chú demo (link lưu trong tài liệu dự án).
 
 

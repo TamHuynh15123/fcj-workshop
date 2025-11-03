@@ -11,48 +11,29 @@ pre: " <b> 1.8. </b> "
 
 ### Mục tiêu tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu mạng lưới AWS: VPC, subnet, route table, Internet Gateway, NAT, Security Group và NACL.
+* Triển khai tài nguyên trong VPC và thực hành mẫu kết nối an toàn (bastion host).
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Lên kế hoạch CIDR và sơ đồ subnet (public/private); ghi chú lý do chọn CIDR.                                                                                                              | 27/10/2025   | 27/10/2025      | VPC docs                                    |
+| 3   | - Tạo VPC với public và private subnets; cấu hình route table và gắn Internet Gateway cho public subnet.                                                                                    | 28/10/2025   | 28/10/2025      | VPC guide                                   |
+| 4   | - Thiết lập private subnet và NAT Gateway (hoặc NAT instance); kiểm tra kết nối outbound từ instances trong private subnet.                                                                 | 29/10/2025   | 29/10/2025      | NAT docs                                    |
+| 5   | - Thiết kế và áp dụng Security Groups & Network ACLs; tạo rule chỉ mở traffic cần thiết (SSH qua bastion, HTTP/HTTPS, port DB).                                                            | 30/10/2025   | 30/10/2025      | Security groups docs                        |
+| 6   | - Triển khai bastion host trên public subnet; thử SSH proxy tới private EC2; vẽ sơ đồ mạng và ghi lại note debug.                                                                           | 31/10/2025   | 31/10/2025      | VPC/SSH best practices                      |
 
 
 ### Kết quả đạt được tuần 8:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Thiết kế và tạo VPC gồm public và private subnets, cấu hình route table và Internet Gateway.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Khởi tạo EC2 trong public/private subnet và kiểm tra kết nối qua bastion host/SSH proxy.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Cấu hình Security Groups và Network ACLs để giới hạn lưu lượng theo nguyên tắc least-privilege.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Áp dụng NAT gateway để cho phép instances trong private subnet truy cập internet khi cần.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Lưu lại sơ đồ VPC và các lệnh kiểm tra mạng (traceroute, curl) phục vụ việc debug.
 
 

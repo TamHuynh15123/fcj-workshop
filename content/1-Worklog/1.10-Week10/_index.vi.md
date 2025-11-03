@@ -11,48 +11,31 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu giám sát và audit với CloudWatch và CloudTrail.
+* Tạo IAM role cho dịch vụ và viết policy theo nguyên tắc least-privilege.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Đọc về CloudWatch & CloudTrail; lên kế hoạch các tài nguyên cần monitor.                                                                                                                 | 10/11/2025   | 10/11/2025      | CloudWatch & CloudTrail docs               |
+| 3   | - Cài đặt và cấu hình CloudWatch Agent trên EC2; thu thập metrics hệ thống và ứng dụng (CPU, memory, disk).                                                                                 | 11/11/2025   | 11/11/2025      | CloudWatch agent guide                     |
+| 4   | - Tạo dashboard CloudWatch: thêm widgets cho EC2 và RDS; thêm biểu đồ custom metric cho ứng dụng.                                                                                          | 12/11/2025   | 12/11/2025      | CloudWatch dashboards docs                 |
+| 5   | - Định nghĩa CloudWatch alarms (CPU, memory qua agent, disk) và tạo SNS topic để nhận cảnh báo; test trigger alarm.                                                                          | 13/11/2025   | 13/11/2025      | CloudWatch Alarms & SNS docs               |
+| 6   | - Bật CloudTrail, cấu hình trail tới S3, kiểm tra logs cho hoạt động console và API; rà soát các event nghi vấn.                                                                             | 14/11/2025   | 14/11/2025      | CloudTrail docs                            |
 
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Thiết lập CloudWatch metrics và dashboard để giám sát EC2, RDS và metric ứng dụng.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Tạo CloudWatch Alarms cho CPU, memory (sử dụng agent) và disk usage; cấu hình SNS để gửi thông báo.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Kích hoạt CloudTrail để ghi lại hoạt động API và lưu trữ log vào S3.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Tạo IAM role cho EC2 và role cho automation với quyền giới hạn.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Soạn và thử nghiệm policy S3 read-only, điều chỉnh quyền để tuân theo least-privilege.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Ghi chú: tiếp tục ghi IaC để tự động hóa các cấu hình này.
 
 
