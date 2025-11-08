@@ -10,98 +10,145 @@ pre: " <b> 2. </b> "
 
 Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+# Coffee Cloud – Coffee Shop Order Platform  
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+### 1. Tóm tắt điều hành
+Dự án "Coffee Cloud – Coffee Shop Order Platform" là nền tảng web giúp khách hàng đặt cà phê trực tuyến, tích điểm sau mỗi đơn hàng và đổi voucher ưu đãi.
+
+Hệ thống hỗ trợ ba nhóm người dùng: Customer, Shipper, và Admin, nhằm tối ưu trải nghiệm đặt hàng, giao hàng và quản lý vận hành quán.
+
+Ứng dụng Frontend được xây dựng bằng ReactJS, Backend bằng C#/.NET chạy trên AWS Lambda, kết nối qua API Gateway và được triển khai hoàn toàn trên AWS Free Tier với các dịch vụ: Amplify (Hosting + CI/CD), Cognito (Authentication), Lambda .NET (Backend logic), S3 Storage, DynamoDB, SNS (Notifications), SES (Email Service), IAM, và CloudWatch Logs.  
 
 ### 2. Tuyên bố vấn đề  
 *Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+Quán cà phê truyền thống gặp khó khăn trong việc quản lý đơn hàng đông đúc, khách hàng phải chờ đợi lâu để đặt hàng và nhận sản phẩm. Không có hệ thống tích điểm để khuyến khích khách hàng quay lại, và việc theo dõi trạng thái đơn hàng chưa minh bạch.
 
 *Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+Nền tảng Coffee Cloud được xây dựng với kiến trúc serverless trên AWS, sử dụng ReactJS cho frontend, C#/.NET Lambda cho backend logic, DynamoDB để lưu trữ dữ liệu và Cognito để quản lý người dùng. Hệ thống cung cấp ba giao diện riêng biệt cho Customer (đặt hàng, tích điểm), Shipper (nhận và giao hàng), và Admin (quản lý tổng thể). Tích hợp API Gateway để đảm bảo bảo mật và khả năng mở rộng. AWS SNS được sử dụng để gửi thông báo realtime về trạng thái đơn hàng, trong khi SES xử lý email notifications và marketing campaigns. Các tính năng chính bao gồm đặt hàng trực tuyến, hệ thống tích điểm, theo dõi đơn hàng thời gian thực, quản lý inventory và hệ thống thông báo đa kênh.
 
 *Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+Hệ thống giúp tăng doanh thu thông qua kênh online, giảm thời gian chờ đợi của khách hàng và tối ưu hóa quy trình vận hành. Chi phí triển khai thấp nhờ sử dụng AWS Free Tier, ước tính chi phí vận hành hàng tháng dưới $5 USD cho giai đoạn đầu. Hệ thống tích điểm giúp tăng tỷ lệ khách hàng quay lại, dự kiến tăng doanh thu 20-30% so với hình thức truyền thống. Thời gian hoàn vốn ước tính 3-6 tháng nhờ tiết kiệm chi phí nhân lực và tăng hiệu quả bán hàng.  
 
 ### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+Coffee Cloud áp dụng kiến trúc serverless hoàn toàn trên AWS để đảm bảo khả năng mở rộng và tiết kiệm chi phí. Frontend ReactJS được deploy trên AWS Amplify với tích hợp CI/CD tự động. Backend API được xây dựng bằng C#/.NET và chạy trên AWS Lambda, kết nối thông qua API Gateway để đảm bảo bảo mật và throttling. Dữ liệu được lưu trữ trong DynamoDB cho hiệu suất cao và S3 cho static assets. Authentication và authorization được quản lý bởi Amazon Cognito với hỗ trợ đa role (Customer, Shipper, Admin).
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
-
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+![Coffee Cloud Platform Architecture](/images/2-Proposal/coffee_architecture.jpg)
 
 *Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+- *AWS Amplify*: Hosting frontend ReactJS với CI/CD pipeline tự động.  
+- *AWS Lambda*: Backend logic sử dụng C#/.NET runtime để xử lý business logic.  
+- *Amazon API Gateway*: REST API endpoint để kết nối frontend và backend.  
+- *Amazon DynamoDB*: NoSQL database lưu trữ dữ liệu users, orders, products, points.  
+- *Amazon S3*: Lưu trữ static assets như hình ảnh sản phẩm, documents.  
+- *Amazon Cognito*: Authentication và authorization cho 3 loại user roles.  
+- *Amazon SNS*: Push notifications và SMS alerts cho trạng thái đơn hàng và promotions.  
+- *Amazon SES*: Email service cho order confirmations, receipts và marketing campaigns.  
+- *Amazon CloudWatch*: Monitoring và logging cho toàn bộ hệ thống.  
+- *AWS IAM*: Quản lý permissions và security policies.  
 
 *Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+- *Frontend Layer*: ReactJS application hosted trên Amplify với responsive design.  
+- *API Layer*: API Gateway làm entry point cho tất cả HTTP requests.  
+- *Business Logic Layer*: AWS Lambda functions viết bằng C#/.NET xử lý core logic.  
+- *Data Layer*: DynamoDB tables cho structured data, S3 buckets cho file storage.  
+- *Authentication Layer*: Cognito User Pools quản lý users với 3 groups (Customer, Shipper, Admin).  
+- *Notification Layer*: SNS cho real-time notifications, SES cho email communications.  
+- *Monitoring Layer*: CloudWatch theo dõi performance, errors và usage metrics.  
 
 ### 4. Triển khai kỹ thuật  
 *Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+Dự án Coffee Cloud được chia thành 4 giai đoạn chính trong vòng 3 tháng:  
+1. *Nghiên cứu và thiết kế*: Phân tích yêu cầu business, thiết kế database schema, wireframe UI/UX và kiến trúc system (Tháng 1).  
+2. *Setup Environment và Backend Development*: Cấu hình AWS services, phát triển Lambda functions với C#/.NET, thiết lập DynamoDB tables và API Gateway (Tháng 1-2).  
+3. *Frontend Development*: Xây dựng ReactJS application, tích hợp với backend APIs, implement authentication flow với Cognito (Tháng 2).  
+4. *Testing và Deployment*: Unit testing, integration testing, performance testing, deploy lên Amplify và monitoring (Tháng 3).  
 
 *Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+- *Frontend Requirements*: ReactJS với hooks, React Router cho navigation, Axios cho API calls, CSS frameworks (Bootstrap/Material-UI), responsive design cho mobile và desktop.  
+- *Backend Requirements*: C#/.NET 6+ runtime trên Lambda, Entity Framework Core cho data access, JWT authentication, exception handling và logging.  
+- *Database Design*: DynamoDB tables cho Users, Products, Orders, OrderItems, Points, Vouchers với proper indexing và relationships.  
+- *DevOps Requirements*: Git version control, Amplify CI/CD pipeline, CloudWatch monitoring, IAM roles và policies cho security.  
 
 ### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+- *Giai đoạn 1 (Tuần 1-4)*: Nghiên cứu và thiết kế hệ thống  
+    - Phân tích yêu cầu business và technical  
+    - Thiết kế database schema và API specifications  
+    - Tạo wireframes và UI mockups  
+    - Setup AWS account và cấu hình ban đầu  
+- *Giai đoạn 2 (Tuần 5-8)*: Phát triển Backend và Infrastructure  
+    - Tạo DynamoDB tables và configure indexes  
+    - Phát triển Lambda functions với C#/.NET  
+    - Setup API Gateway và integrate với Lambda  
+    - Configure Cognito User Pools và Groups  
+- *Giai đoạn 3 (Tuần 9-10)*: Phát triển Frontend  
+    - Xây dựng ReactJS components và pages  
+    - Implement authentication và authorization  
+    - Tích hợp với backend APIs  
+    - Responsive design cho mobile  
+- *Giai đoạn 4 (Tuần 11-12)*: Testing và Deployment  
+    - Unit testing và integration testing  
+    - Deploy lên AWS Amplify  
+    - Performance optimization và monitoring setup  
+    - User acceptance testing và documentation  
 
 ### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+Dự án Coffee Cloud được thiết kế để tận dụng tối đa AWS Free Tier trong giai đoạn đầu phát triển và testing.
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+*Chi phí AWS Services (Monthly)*  
+- AWS Amplify: $0.00 USD (Free Tier: 1000 build minutes, 15GB storage)  
+- AWS Lambda: $0.00 USD (Free Tier: 1M requests, 400,000 GB-seconds)  
+- Amazon API Gateway: $0.00 USD (Free Tier: 1M API calls)  
+- Amazon DynamoDB: $0.00 USD (Free Tier: 25GB storage, 25 RCU/WCU)  
+- Amazon S3: $0.00 USD (Free Tier: 5GB standard storage)  
+- Amazon Cognito: $0.00 USD (Free Tier: 50,000 MAU)  
+- Amazon SNS: $0.00 USD (Free Tier: 1M publications, 100,000 HTTP/HTTPS requests)  
+- Amazon SES: $0.00 USD (Free Tier: 62,000 emails/month)  
+- Amazon CloudWatch: $0.00 USD (Free Tier: 10 custom metrics, 5GB logs)  
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+*Chi phí sau Free Tier (Estimated for production)*  
+- AWS Amplify: ~$1.00 USD/month (hosting + build minutes)  
+- AWS Lambda: ~$0.20 USD/month (based on 10K requests/day)  
+- API Gateway: ~$3.50 USD/month (1M requests)  
+- DynamoDB: ~$1.25 USD/month (additional RCU/WCU)  
+- Amazon SNS: ~$0.50 USD/month (additional notifications + SMS)  
+- Amazon SES: ~$1.00 USD/month (additional emails beyond free tier)  
+
+*Tổng ước tính*: $0.00 USD/month (Development), ~$7.45 USD/month (Production)  
+*Chi phí phát triển*: Chỉ phát sinh chi phí nhân lực cho developer  
 
 ### 7. Đánh giá rủi ro  
 *Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+- Vượt giới hạn Free Tier: Ảnh hưởng trung bình, xác suất trung bình  
+- Lỗi integration giữa các AWS services: Ảnh hưởng cao, xác suất thấp  
+- Performance issues với DynamoDB: Ảnh hưởng trung bình, xác suất thấp  
+- Security vulnerabilities: Ảnh hưởng cao, xác suất thấp  
 
 *Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+- Chi phí: Thiết lập CloudWatch billing alerts, monitor usage daily  
+- Integration: Thực hiện thorough testing, sử dụng AWS SAM cho local testing  
+- Performance: Thiết kế proper DynamoDB indexes, implement caching strategies  
+- Security: Follow AWS security best practices, regular security audits  
 
 *Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+- Backup và recovery plan cho DynamoDB data  
+- Fallback mechanisms cho critical functions  
+- Manual operation procedures nếu hệ thống gặp sự cố  
+- Communication plan với stakeholders khi có incidents  
 
 ### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+*Cải tiến kỹ thuật*: Hệ thống Coffee Cloud hoàn chỉnh với khả năng xử lý hàng trăm đơn hàng đồng thời, responsive design hoạt động mượt mà trên mọi thiết bị.
+
+*Lợi ích kinh doanh*:  
+- Tăng 30% doanh thu nhờ kênh online mới  
+- Giảm 50% thời gian xử lý đơn hàng  
+- Tăng 25% tỷ lệ khách hàng quay lại nhờ hệ thống tích điểm  
+- Cải thiện customer satisfaction score lên 90%  
+
+*Kỹ năng phát triển*:  
+- Thành thạo AWS Serverless Architecture  
+- Kinh nghiệm phát triển full-stack với ReactJS và .NET  
+- Hiểu biết sâu về NoSQL database design  
+- Kỹ năng DevOps với CI/CD pipeline  
+
+*Khả năng mở rộng*: Hệ thống có thể dễ dàng scale để phục vụ multiple coffee shops hoặc integrate thêm features như AI recommendation, loyalty program nâng cao.  
+*Giá trị dài hạn*: Platform foundation có thể tái sử dụng cho các dự án e-commerce khác, tạo cơ sở cho việc phát triển các ứng dụng kinh doanh tương tự.
