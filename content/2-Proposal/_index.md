@@ -4,11 +4,7 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
 
 # Coffee Cloud – Coffee Shop Order Platform
 
@@ -32,7 +28,7 @@ The system helps increase revenue through online channels, reduces customer wait
 ### 3. Solution Architecture
 Coffee Cloud adopts a fully serverless architecture on AWS to ensure scalability and cost efficiency. The ReactJS frontend is deployed on AWS Amplify with automatic CI/CD integration. Backend APIs are built with C#/.NET and run on AWS Lambda, connected through API Gateway to ensure security and throttling. Data is stored in DynamoDB for high performance and S3 for static assets. Authentication and authorization are managed by Amazon Cognito with multi-role support (Customer, Shipper, Admin).
 
-![Coffee Cloud Platform Architecture](/images/2-Proposal/coffee_architecture.jpg)
+![Coffee Cloud Platform Architecture](/images/2-Proposal/architecture_proposal.jpg)
 
 ### AWS Services Used
 - **AWS Amplify**: Hosts ReactJS frontend with automatic CI/CD pipeline.

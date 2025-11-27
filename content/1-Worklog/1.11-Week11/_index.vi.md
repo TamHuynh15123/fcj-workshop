@@ -17,23 +17,16 @@ pre: " <b> 1.11. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Đọc về CloudFormation và xem ví dụ template; xác định các tài nguyên sẽ đưa vào stack đơn giản (VPC + EC2).                                                                             | 17/11/2025   | 17/11/2025      | CloudFormation docs                        |
-| 3   | - Viết CloudFormation template để tạo VPC, public subnet và EC2; validate template bằng cfn-lint hoặc console.                                                                             | 18/11/2025   | 18/11/2025      | CFN template examples                      |
-| 4   | - Cài Terraform; viết cấu hình Terraform ban đầu (provider, VPC, EC2) và chạy plan để so sánh workflow với CloudFormation.                                                                  | 19/11/2025   | 19/11/2025      | Terraform docs                             |
-| 5   | - Modularize Terraform: tạo module nhỏ cho EC2 (biến cho AMI, instance type, security group) và sử dụng tfstate để theo dõi tài nguyên.                                                     | 20/11/2025   | 20/11/2025      | Terraform modules guide                    |
-| 6   | - Thử huỷ stack cho cả CloudFormation và Terraform; đảm bảo không còn tài nguyên thừa (EBS, Elastic IP); ghi lại khác biệt của hai công cụ.                                               | 21/11/2025   | 21/11/2025      | IaC teardown best practices                |
+| 2   | - Làm admin dashboard bên Front End React .                                                                             | 17/11/2025   | 18/11/2025      |                         |
+| 3   | - Làm shipper dashboard bên Front End React.                                                                             | 19/11/2025   | 20/11/2025      |                       |
+| 4   | - Set up SES bên Back End để gửi mail tài khoản về shippers.                                                                  | 21/11/2025   | 21/11/2025      |       AWS Console Home SES                       |
+
 
 
 ### Kết quả đạt được tuần 11:
 
-* Nắm được các khái niệm cơ bản của CloudFormation và viết template để tạo VPC, public subnet và EC2 instance.
+* Nắm được các khái niệm cơ bản của SES để ứng dụng vào dự án
 
-* Cài đặt và sử dụng Terraform để provision lại cùng stack, so sánh cách quản lý state và workflow.
-
-* Tham số hoá template và viết module nhỏ để tái sử dụng IaC; ghi lại quy trình triển khai.
-
-* Thực hành huỷ stack và xác minh tài nguyên (EBS, Elastic IP) được dọn sạch.
-
-* Ghi chú: áp dụng IaC cho bài mini-project cuối khóa.
+* Học được thêm kiến thức và chức năng cần thiết từ dự án
 
 

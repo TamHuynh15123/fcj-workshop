@@ -4,11 +4,7 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
 
 # Coffee Cloud – Coffee Shop Order Platform  
 
@@ -32,7 +28,7 @@ Hệ thống giúp tăng doanh thu thông qua kênh online, giảm thời gian c
 ### 3. Kiến trúc giải pháp  
 Coffee Cloud áp dụng kiến trúc serverless hoàn toàn trên AWS để đảm bảo khả năng mở rộng và tiết kiệm chi phí. Frontend ReactJS được deploy trên AWS Amplify với tích hợp CI/CD tự động. Backend API được xây dựng bằng C#/.NET và chạy trên AWS Lambda, kết nối thông qua API Gateway để đảm bảo bảo mật và throttling. Dữ liệu được lưu trữ trong DynamoDB cho hiệu suất cao và S3 cho static assets. Authentication và authorization được quản lý bởi Amazon Cognito với hỗ trợ đa role (Customer, Shipper, Admin).
 
-![Coffee Cloud Platform Architecture](/images/2-Proposal/coffee_architecture.jpg)
+![Coffee Cloud Platform Architecture](/images/2-Proposal/architecture_proposal.jpg)
 
 *Dịch vụ AWS sử dụng*  
 - *AWS Amplify*: Hosting frontend ReactJS với CI/CD pipeline tự động.  
