@@ -9,20 +9,44 @@ pre: " <b> 4.2. </b> "
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
 {{% /notice %}}
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Summary Report: "AI/ML on AWS Workshop"
+
+### Event Details
+- **Date**: Saturday, November 15, 2025
+- **Time**: 8:30 AM - 12:00 PM  
+- **Location**: AWS Vietnam Office
+- **Event Type**: Technical Workshop and Training
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Provide comprehensive overview of AI/ML landscape in Vietnam
+- Demonstrate AWS AI/ML services and capabilities
+- Hands-on experience with Amazon SageMaker and Amazon Bedrock
+- Learn about Generative AI implementation and best practices
+- Network with AI/ML practitioners and AWS experts
 
-### Speakers
+### Agenda Highlights
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+#### Welcome & Introduction (8:30 - 9:00 AM)
+- Participant registration and networking
+- Workshop overview and learning objectives  
+- Ice-breaker activity
+- Overview of the AI/ML landscape in Vietnam
+
+#### AWS AI/ML Services Overview (9:00 - 10:30 AM)
+- **Amazon SageMaker** - End-to-end ML platform
+  - Data preparation and labeling
+  - Model training, tuning, and deployment
+  - Integrated MLOps capabilities
+- **Live Demo**: SageMaker Studio walkthrough
+
+#### Generative AI with Amazon Bedrock (10:45 AM - 12:00 PM)
+- **Foundation Models**: Claude, Llama, Titan comparison and selection guide
+- **Prompt Engineering**: Techniques, Chain-of-Thought reasoning, Few-shot learning
+- **Retrieval-Augmented Generation (RAG)**: Architecture and Knowledge Base integration
+- **Bedrock Agents**: Multi-step workflows and tool integrations
+- **Guardrails**: Safety and content filtering
+- **Live Demo**: Building a Generative AI chatbot using Bedrock
 
 ### Key Highlights
 

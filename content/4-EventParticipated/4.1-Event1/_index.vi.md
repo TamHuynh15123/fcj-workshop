@@ -1,5 +1,5 @@
 ---
-title: "Event 1"
+title: "Sự kiện 1"
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
@@ -9,20 +9,49 @@ pre: " <b> 4.1. </b> "
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Báo cáo Tóm tắt: "AI-Driven Development Life Cycle: Reimagining Software Engineering"
 
-### Mục Đích Của Sự Kiện
+### Chi tiết Sự kiện
+- **Ngày**: Thứ Sáu, 3 tháng 10, 2025 lúc 2pm
+- **Thời gian**: 2:00 PM - 4:30 PM
+- **Địa điểm**: AWS Event Hall, L26 Bitexco Tower, HCMC
+- **Loại sự kiện**: Hội thảo Kỹ thuật và Demo
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+### Mục tiêu Sự kiện
 
-### Danh Sách Diễn Giả
+- Khám phá AI-Driven Development sử dụng Amazon Q Developer và Kiro
+- Tìm hiểu cách AI thay đổi lifecycle phát triển phần mềm
+- Demo trực tiếp các công cụ AI trong quá trình development
+- Networking với cộng đồng AWS GenAI Builder
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+### Lịch trình
+
+#### Chào mừng (2:00 PM - 2:15 PM)
+- Đăng ký tham gia và networking
+- Tổng quan về workshop và mục tiêu học tập
+- Hoạt động làm quen
+- Giới thiệu về AI/ML landscape tại Việt Nam
+
+#### AI-Driven Development Life Cycle Overview (2:15 PM - 3:30 PM)
+- **Tổng quan và demo Amazon Q Developer** (by Toan Huynh)
+- Cách AI thay đổi software development lifecycle
+- Tự động hóa từ planning đến maintenance
+- Code transformation và modernization capabilities
+
+#### Giải lao (3:30 PM - 3:45 PM)
+
+#### Kiro Demonstration (3:45 PM - 4:30 PM)  
+- **Demo Kiro** (by My Nguyen)
+- Multi-step workflows và tool integrations
+- Practical applications trong development
+
+### Diễn giả
+
+- **Toan Huynh** - AWS Solutions Architect, Amazon Q Developer specialist
+- **My Nguyen** - AWS Technical Evangelist, Kiro platform expert
+
+### Coordinators
+- Diem My, Dai Truong, Dinh Nguyen
 
 ### Nội Dung Nổi Bật
 
