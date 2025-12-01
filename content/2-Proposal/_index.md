@@ -7,7 +7,13 @@ pre: " <b> 2. </b> "
 
 
 # Coffee Cloud – Coffee Shop Order Platform
+---
 
+### Project Documentation
+
+📄 **[Download Complete Project Proposal (Word Document)](/documents/Coffee-Cloud-Complete-Proposal.docx)**
+
+---
 ### 1. Executive Summary
 The "Coffee Cloud – Coffee Shop Order Platform" project is a web platform that helps customers order coffee online, accumulate points after each order, and redeem promotional vouchers.
 

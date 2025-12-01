@@ -7,7 +7,11 @@ pre: " <b> 2. </b> "
 
 
 # Coffee Cloud – Coffee Shop Order Platform  
+### Project Documentation
 
+📄 **[Download Complete Project Proposal (Word Document)](/documents/Coffee-Cloud-Complete-Proposal.docx)**
+
+---
 ### 1. Tóm tắt điều hành
 Dự án "Coffee Cloud – Coffee Shop Order Platform" là nền tảng web giúp khách hàng đặt cà phê trực tuyến, tích điểm sau mỗi đơn hàng và đổi voucher ưu đãi.
 
