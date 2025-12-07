@@ -4,10 +4,6 @@ weight: 2
 chapter: false
 pre: " <b> 1.12 </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 ### Mục tiêu tuần 12:
 
 * Hoàn thành mini-project: tích hợp các dịch vụ cốt lõi thành một kiến trúc nhỏ có tài liệu.

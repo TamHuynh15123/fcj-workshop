@@ -5,10 +5,6 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 Trong suốt thời gian thực tập tại **AWS First Cloud Journey** từ **08/09** đến **24/12**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức về điện toán đám mây vào các tình huống thực tế trong khi phát triển hiểu biết toàn diện về các dịch vụ AWS.
 
 Tôi đã tham gia **phát triển dự án Coffee Cloud – Coffee Shop Order Platform**, một ứng dụng serverless full-stack sử dụng ReactJS, C#/.NET Lambda, và nhiều dịch vụ AWS bao gồm Amplify, DynamoDB, Cognito, API Gateway, SNS, và SES. Qua dự án này, tôi đã cải thiện kỹ năng **thiết kế kiến trúc cloud, phát triển full-stack, viết tài liệu dự án, thuyết trình kỹ thuật, và tích hợp các dịch vụ AWS**.

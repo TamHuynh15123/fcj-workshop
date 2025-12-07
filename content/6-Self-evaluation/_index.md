@@ -5,10 +5,6 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
 During my internship at **AWS First Cloud Journey** from **08/09** to **24/12**, I had the opportunity to learn, practice, and apply cloud computing knowledge to real-world scenarios while developing a comprehensive understanding of AWS services.
 
 I participated in **developing the Coffee Cloud – Coffee Shop Order Platform project**, a full-stack serverless application using ReactJS, C#/.NET Lambda, and multiple AWS services including Amplify, DynamoDB, Cognito, API Gateway, SNS, and SES. Through this project, I improved my skills in **cloud architecture design, full-stack development, project documentation, technical presentation, and AWS service integration**.
