@@ -4,27 +4,149 @@ weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
+
+# Coffee Cloud Platform - AWS Workshop Series
+
+Các workshop thực hành xây dựng Coffee Shop Order Platform trên AWS từ đầu đến cuối.
+
+## 🎯 Workshop Overview
+
+Trong series workshop này, bạn sẽ học cách xây dựng một ứng dụng web full-stack trên AWS, bao gồm frontend với ReactJS + Amplify, authentication với Cognito, và nhiều tính năng nâng cao khác.
+
+**Coffee Cloud Platform** là một ứng dụng đặt hàng cà phê online với các tính năng:
+- 🛒 Đặt hàng và thanh toán online
+- 👥 Hệ thống phân quyền 3 nhóm: Customer, Shipper, Admin
+- ⭐ Tích điểm và đổi voucher
+- 📍 Theo dõi giao hàng real-time với GPS
+- 📊 Dashboard quản lý cho Admin
+
+---
+
+## 📚 Workshop Series
+
+### Core Workshops (Bắt buộc)
+
+#### 1. [Deploy ReactJS Frontend với AWS Amplify](5.1-amplify-frontend/)
+⏱️ **90 phút** | 🎯 **Beginner-Intermediate**
+
+Tạo và deploy ứng dụng ReactJS lên AWS Amplify với CI/CD tự động từ GitHub. Học cách setup pipeline, configure build settings, và optimize performance.
+
+**Bạn sẽ học:**
+- Tạo React app với Vite
+- Setup Git repository
+- Deploy lên AWS Amplify
+- Configure CI/CD pipeline
+- Environment variables và build optimization
+
+---
+
+#### 2. [Multi-Role Authentication với Amazon Cognito](5.2-cognito-auth/)
+⏱️ **120 phút** | 🎯 **Intermediate**
+
+Implement authentication system với Amazon Cognito hỗ trợ 3 nhóm người dùng: Customer, Shipper, và Admin. Học về JWT tokens, role-based access control, và secure authentication flow.
+
+**Bạn sẽ học:**
+- Tạo Cognito User Pool
+- Configure user groups và permissions
+- Integrate Cognito với React
+- JWT authentication và token management
+- Role-based dashboards
+
+---
+
+### Advanced Workshops (Sắp ra mắt)
+
+#### 3. Backend API với Elastic Beanstalk
+⏱️ **150 phút** | 🎯 **Intermediate-Advanced**
+
+Deploy containerized .NET 8.0 backend services lên AWS Elastic Beanstalk với auto-scaling và load balancing.
+
+#### 4. NoSQL Database với DynamoDB
+⏱️ **120 phút** | 🎯 **Intermediate**
+
+Design và implement DynamoDB tables cho Coffee Shop với proper indexing strategies.
+
+#### 5. GPS Tracking với Amazon Location Service
+⏱️ **90 phút** | 🎯 **Intermediate**
+
+Implement real-time delivery tracking với maps, geocoding, và route optimization.
+
+#### 6. Multi-Channel Notifications (SNS + SES)
+⏱️ **90 phút** | 🎯 **Intermediate**
+
+Setup notification system với SNS cho push notifications và SES cho email service.
+
+#### 7. Static Assets với Amazon S3
+⏱️ **60 phút** | 🎯 **Beginner**
+
+Configure S3 buckets cho product images với proper security và CDN optimization.
+
+---
+
+## 🎓 Learning Path
+
+```
+1. Amplify Frontend (Foundation)
+        ↓
+2. Cognito Authentication (Core)
+        ↓
+3. Elastic Beanstalk Backend (Core)
+        ↓
+4. DynamoDB Database (Core)
+        ↓
+5-7. Advanced Features (Optional)
+```
+
+---
+
+## 📋 Prerequisites
+
+Trước khi bắt đầu, đảm bảo bạn có:
+- ✅ AWS Account (Free Tier eligible)
+- ✅ GitHub account
+- ✅ Node.js 18+ và npm
+- ✅ Git installed
+- ✅ Code editor (VS Code recommended)
+- ✅ Hiểu biết cơ bản về React và JavaScript
+
+---
+
+## 💰 Cost Estimation
+
+Với **AWS Free Tier**, tổng chi phí workshops:
+
+| Service | Free Tier | After Free Tier |
+|---------|-----------|-----------------|
+| **Amplify** | 1000 build minutes/month | $0.01/min |
+| **Cognito** | 50,000 MAU | $0.0055/MAU |
+| **Elastic Beanstalk** | 750 hours/month (t2.micro) | ~$10/month |
+| **DynamoDB** | 25 GB storage | $0.25/GB |
+| **S3** | 5 GB storage | $0.023/GB |
+| **Location Service** | 50,000 requests/month | $0.0004/request |
+
+**Total estimated cost:** $0-5/month trong giai đoạn học
+
+---
+
+## 🚀 Getting Started
+
+Bắt đầu với [Workshop 1: Deploy Frontend với AWS Amplify](5.1-amplify-frontend/)
+
+---
+
+## 📖 Additional Resources
+
+- [AWS Free Tier](https://aws.amazon.com/free/)
+- [AWS Documentation](https://docs.aws.amazon.com/)
+- [React Documentation](https://react.dev/)
+- [Coffee Cloud Proposal](../2-Proposal/)
+
+---
+
+{{% notice tip %}}
+💡 **Tip:** Làm các workshop theo thứ tự để hiểu rõ kiến trúc tổng thể. Mỗi workshop build trên kiến thức từ workshop trước.
 {{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
-
-#### Overview
-
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
-
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
-
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
-
-#### Content
-
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+{{% notice warning %}}
+⚠️ **Note:** Remember to clean up resources sau mỗi workshop để tránh chi phí ngoài ý muốn. Instructions có trong phần Cleanup của mỗi workshop.
+{{% /notice %}}
