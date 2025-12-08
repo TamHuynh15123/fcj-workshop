@@ -1,30 +1,30 @@
 ---
-title: "Deploy Frontend với AWS Amplify"
+title: "Deploy Frontend with AWS Amplify"
 weight: 1
 chapter: false
 pre: " <b> 5.1 </b> "
 ---
 
-# Deploy ReactJS Frontend với AWS Amplify
+# Deploy ReactJS Frontend with AWS Amplify
 
-#### Tổng quan
+#### Overview
 
-Trong workshop này, bạn sẽ học cách deploy ứng dụng ReactJS cho Coffee Cloud Platform lên **AWS Amplify** với tính năng CI/CD tự động. AWS Amplify giúp bạn dễ dàng host static website và tự động build + deploy mỗi khi bạn push code lên Git repository.
+In this workshop, you will learn how to deploy a ReactJS application for Coffee Cloud Platform to **AWS Amplify** with automatic CI/CD capabilities. AWS Amplify makes it easy to host static websites and automatically build + deploy every time you push code to your Git repository.
 
-**AWS Amplify** là dịch vụ fully-managed giúp deploy và host các ứng dụng web frontend với những tính năng:
-- 🚀 Automatic CI/CD pipeline từ Git repository
-- 🔒 Built-in SSL certificate miễn phí
-- 🌍 Global CDN với performance cao
+**AWS Amplify** is a fully-managed service that helps deploy and host frontend web applications with the following features:
+- 🚀 Automatic CI/CD pipeline from Git repository
+- 🔒 Built-in free SSL certificate
+- 🌍 Global CDN with high performance
 - 💰 Free tier: 1000 build minutes/month, 15GB storage
 
-#### Kiến trúc
+#### Architecture
 
 ```
 GitHub Repository → AWS Amplify → CloudFront CDN → Users
      ↓ (push code)      ↓ (auto build)    ↓ (distribute)
 ```
 
-#### Nội dung
+#### Contents
 
 1. [Workshop Overview](5.1.1-overview/)
 2. [Prerequisites](5.1.2-prerequisites/)
@@ -33,12 +33,12 @@ GitHub Repository → AWS Amplify → CloudFront CDN → Users
 5. [Configure Build Settings](5.1.5-configure-build/)
 6. [Testing & Verification](5.1.6-testing/)
 
-#### Thời gian hoàn thành
-⏱️ Khoảng **60-90 phút**
+#### Completion Time
+⏱️ Approximately **60-90 minutes**
 
-#### Yêu cầu
+#### Requirements
 - ✅ AWS Account (Free Tier eligible)
 - ✅ GitHub account
-- ✅ Node.js 18+ và npm
+- ✅ Node.js 18+ and npm
 - ✅ Git installed
 - ✅ Code editor (VS Code recommended)

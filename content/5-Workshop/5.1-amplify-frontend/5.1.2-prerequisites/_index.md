@@ -59,4 +59,4 @@ Enter:
 
 ## Next Steps
 
-Continue with [Create React App](../5.1.3-setup-git/) to create the Coffee Cloud application.
+Continue with [Setup Github Repository](../5.1.3-setup-git/) to create the Coffee Cloud application.

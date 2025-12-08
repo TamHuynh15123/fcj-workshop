@@ -287,4 +287,4 @@ frontend:
 
 ## Bước tiếp theo
 
-Tiếp tục với [Cấu hình Build Settings](../5.1.6-configure-build/) để tối ưu hóa build process.
+Tiếp tục với [Testing](../5.1.5-testing/).
