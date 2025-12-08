@@ -129,7 +129,6 @@ AWS Amplify will start deployment with 4 phases:
 - Health check
 - Verify deployment success
 
-![Deployment Process](/images/5-Workshop/5.1-amplify-frontend/deployment-process.png)
 
 ---
 
