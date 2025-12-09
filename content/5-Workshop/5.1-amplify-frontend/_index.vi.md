@@ -1,8 +1,8 @@
 ---
 title: "Deploy Frontend với AWS Amplify"
-weight: 5
+weight: 1
 chapter: false
-pre: " <b> 5.1.5 </b> "
+pre: " <b> 5.1 </b> "
 ---
 
 # Deploy ReactJS Frontend với AWS Amplify

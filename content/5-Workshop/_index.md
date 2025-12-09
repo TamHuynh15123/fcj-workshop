@@ -7,86 +7,86 @@ pre: " <b> 5. </b> "
 
 # Coffee Cloud Platform - AWS Workshop Series
 
-Các workshop thực hành xây dựng Coffee Shop Order Platform trên AWS từ đầu đến cuối.
+Hands-on workshops to build Coffee Shop Order Platform on AWS from start to finish.
 
 ## 🎯 Workshop Overview
 
-Trong series workshop này, bạn sẽ học cách xây dựng một ứng dụng web full-stack trên AWS, bao gồm frontend với ReactJS + Amplify, authentication với Cognito, và nhiều tính năng nâng cao khác.
+In this workshop series, you'll learn how to build a full-stack web application on AWS, including frontend with ReactJS + Amplify and backend .NET API with Elastic Beanstalk.
 
-**Coffee Cloud Platform** là một ứng dụng đặt hàng cà phê online với các tính năng:
-- 🛒 Đặt hàng và thanh toán online
-- 👥 Hệ thống phân quyền 3 nhóm: Customer, Shipper, Admin
-- ⭐ Tích điểm và đổi voucher
-- 📍 Theo dõi giao hàng real-time với GPS
-- 📊 Dashboard quản lý cho Admin
+**Coffee Cloud Platform** is an online coffee ordering application with features:
+- 🛒 Online ordering and payment
+- 👥 3-role authorization system: Customer, Shipper, Admin
+- ⭐ Points accumulation and voucher redemption
+- 📍 Real-time delivery tracking with GPS
+- 📊 Admin management dashboard
 
 ---
 
 ## 📚 Workshop Series
 
-### Core Workshops (Bắt buộc)
+### Core Workshops
 
-#### 1. [Deploy ReactJS Frontend với AWS Amplify](5.1-amplify-frontend/)
-⏱️ **90 phút** | 🎯 **Beginner-Intermediate**
+#### 1. [Deploy ReactJS Frontend with AWS Amplify](5.1-amplify-frontend/)
+⏱️ **90 minutes** | 🎯 **Beginner-Intermediate**
 
-Tạo và deploy ứng dụng ReactJS lên AWS Amplify với CI/CD tự động từ GitHub. Học cách setup pipeline, configure build settings, và optimize performance.
+Create and deploy a ReactJS application to AWS Amplify with automatic CI/CD from GitHub. Learn how to setup pipeline, configure build settings, and optimize performance.
 
-**Bạn sẽ học:**
-- Tạo React app với Vite
+**You will learn:**
+- Create React app with Vite
 - Setup Git repository
-- Deploy lên AWS Amplify
+- Deploy to AWS Amplify
 - Configure CI/CD pipeline
-- Environment variables và build optimization
+- Environment variables and build optimization
 
 ---
 
-#### 2. [Multi-Role Authentication với Amazon Cognito](5.2-cognito-auth/)
-⏱️ **120 phút** | 🎯 **Intermediate**
+#### 2. [Deploy .NET Backend with AWS Elastic Beanstalk](5.2-EB-backend/)
+⏱️ **60-90 minutes** | 🎯 **Intermediate**
 
-Implement authentication system với Amazon Cognito hỗ trợ 3 nhóm người dùng: Customer, Shipper, và Admin. Học về JWT tokens, role-based access control, và secure authentication flow.
+Deploy .NET 8.0 Web API to AWS Elastic Beanstalk with Swagger UI. Learn about publishing application, ZIP deployment, and integration with frontend via Cloudflare Tunnel.
 
-**Bạn sẽ học:**
-- Tạo Cognito User Pool
-- Configure user groups và permissions
-- Integrate Cognito với React
-- JWT authentication và token management
-- Role-based dashboards
+**You will learn:**
+- Publish .NET 8.0 application
+- Deploy to Elastic Beanstalk via AWS Console
+- Test API with Swagger UI
+- Setup Cloudflare Tunnel for HTTPS
+- Connect backend with Amplify frontend
 
 
 ---
 
 ## 📋 Prerequisites
 
-Trước khi bắt đầu, đảm bảo bạn có:
+Before starting, make sure you have:
 - ✅ AWS Account (Free Tier eligible)
 - ✅ GitHub account
-- ✅ Node.js 18+ và npm
+- ✅ Node.js 18+ and npm
+- ✅ .NET 8.0 SDK
 - ✅ Git installed
 - ✅ Code editor (VS Code recommended)
-- ✅ Hiểu biết cơ bản về React và JavaScript
+- ✅ Basic understanding of React, JavaScript, and C#
 
 ---
 
 ## 💰 Cost Estimation
 
-Với **AWS Free Tier**, tổng chi phí workshops:
+With **AWS Free Tier**, total workshop costs:
 
 | Service | Free Tier | After Free Tier |
 |---------|-----------|-----------------|
 | **Amplify** | 1000 build minutes/month | $0.01/min |
-| **Cognito** | 50,000 MAU | $0.0055/MAU |
-| **Elastic Beanstalk** | 750 hours/month (t2.micro) | ~$10/month |
+| **Elastic Beanstalk** | 750 hours/month (t3.micro) | ~$10/month |
 | **DynamoDB** | 25 GB storage | $0.25/GB |
-| **S3** | 5 GB storage | $0.023/GB |
-| **Location Service** | 50,000 requests/month | $0.0004/request |
+| **CloudWatch** | 10 custom metrics | $0.30/metric |
+| **Data Transfer** | 15 GB/month | $0.09/GB |
 
-**Total estimated cost:** $0-5/month trong giai đoạn học
+**Total estimated cost:** $0-5/month during learning phase
 
 ---
 
 ## 🚀 Getting Started
 
-Bắt đầu với [Workshop 1: Deploy Frontend với AWS Amplify](5.1-amplify-frontend/)
+Start with [Workshop 1: Deploy Frontend with AWS Amplify](5.1-amplify-frontend/)
 
 ---
 
@@ -95,14 +95,8 @@ Bắt đầu với [Workshop 1: Deploy Frontend với AWS Amplify](5.1-amplify-f
 - [AWS Free Tier](https://aws.amazon.com/free/)
 - [AWS Documentation](https://docs.aws.amazon.com/)
 - [React Documentation](https://react.dev/)
+- [.NET Documentation](https://learn.microsoft.com/en-us/dotnet/)
 - [Coffee Cloud Proposal](../2-Proposal/)
 
 ---
 
-{{% notice tip %}}
-💡 **Tip:** Làm các workshop theo thứ tự để hiểu rõ kiến trúc tổng thể. Mỗi workshop build trên kiến thức từ workshop trước.
-{{% /notice %}}
-
-{{% notice warning %}}
-⚠️ **Note:** Remember to clean up resources sau mỗi workshop để tránh chi phí ngoài ý muốn. Instructions có trong phần Cleanup của mỗi workshop.
-{{% /notice %}}

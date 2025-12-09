@@ -1,13 +1,13 @@
 ---
-title: "Testing with Swagger"
-weight: 6
+title: "Kiểm tra với Swagger"
+weight: 4
 chapter: false
-pre: " <b> 5.2.6 </b> "
+pre: " <b> 5.2.4 </b> "
 ---
 
-# Testing API with Swagger UI
+# Kiểm tra API với Swagger UI
 
-Now let's test your deployed API using Swagger UI and connect it to your Amplify frontend.
+Bây giờ hãy test API đã deploy sử dụng Swagger UI và kết nối với Amplify frontend.
 
 #### Step 1: Access Swagger UI
 

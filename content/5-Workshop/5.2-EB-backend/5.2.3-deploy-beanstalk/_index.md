@@ -1,8 +1,8 @@
 ---
 title: "Deploy to Elastic Beanstalk"
-weight: 5
+weight: 3
 chapter: false
-pre: " <b> 5.2.5 </b> "
+pre: " <b> 5.2.3 </b> "
 ---
 
 # Deploy to AWS Elastic Beanstalk

@@ -1,8 +1,8 @@
 ---
 title: "Testing with Swagger"
-weight: 6
+weight: 4
 chapter: false
-pre: " <b> 5.2.6 </b> "
+pre: " <b> 5.2.4 </b> "
 ---
 
 # Testing API with Swagger UI
