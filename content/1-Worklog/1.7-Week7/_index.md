@@ -7,26 +7,46 @@ pre: " <b> 1.7. </b> "
 
 ### Week 7 Objectives:
 
-* Learn AWS Identity and Access Management (IAM) fundamentals.
-* Explore S3: buckets, versioning, lifecycle rules, and using S3 for static website hosting.
+* Integrate React frontend with Lambda backend APIs
+* Implement user authentication flow with Cognito
+* Test core Coffee Cloud functionalities
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Review IAM concepts and best practices; read AWS IAM guide; identify required roles for upcoming labs.                                                                                              | 20/10/2025 | 20/10/2025      | AWS IAM docs                               |
-| 3   | - Create IAM groups and users; attach AWS managed policies; create a policy for least-privilege CLI usage and test with aws iam simulate-principal-policy.                                            | 21/10/2025 | 21/10/2025      | IAM policy docs                             |
-| 4   | - Create an IAM role for EC2 (assume-role) for limited S3 access; attach role to an instance profile for later testing.                                                                                | 22/10/2025 | 22/10/2025      | IAM roles docs                              |
-| 5   | - S3: create bucket with encryption (SSE-S3), enable public access block; practice put/get object via CLI and console.                                                                                 | 23/10/2025 | 23/10/2025      | S3 docs                                     |
-| 6   | - Enable S3 versioning and lifecycle rule; deploy a static site to S3 and verify hosting and bucket policy; document steps and troubleshooting notes.                                                 | 24/10/2025 | 24/10/2025      | S3 static hosting guide                     |
+| 1   | - Connect React frontend to API Gateway endpoints <br> - Install and configure AWS SDK for JavaScript <br> - Set up API service layer in React                                                      | 12/08/2025 | 12/08/2025      | AWS SDK documentation                     |
+| 2   | - Implement user login/registration flow <br> - Integrate Cognito authentication with React <br> - Test user session management                                                                      | 13/08/2025 | 13/08/2025      | Cognito JavaScript SDK                    |
+| 3   | - Connect product listing to DynamoDB <br> - Implement shopping cart functionality <br> - Test add/remove items from cart                                                                           | 14/08/2025 | 14/08/2025      | React state management                    |
+| 4   | - Implement order creation flow <br> - Connect order processing to Lambda functions <br> - Test order placement and data storage                                                                      | 15/08/2025 | 15/08/2025      | Lambda integration                        |
+| 5   | - Test points system functionality <br> - Implement order history display <br> - Test complete user journey from registration to order                                                              | 16/08/2025 | 16/08/2025      | End-to-end testing                        |
 
 
 ### Week 7 Achievements:
 
-* Studied IAM concepts: users, groups, roles, policies, and best practices for least privilege.
+* Successfully integrated React frontend with AWS backend services:
+  * Configured AWS SDK for JavaScript in React application
+  * Set up API service layer for clean separation of concerns
+  * Implemented proper error handling for API calls
 
-* Created IAM users and groups, attached managed policies, and generated access keys for CLI use.
+* Completed user authentication integration:
+  * Users can register new accounts through Cognito
+  * Login/logout functionality working properly
+  * Session management with JWT tokens
+  * Role-based access control (Customer, Shipper, Admin)
 
-* Practiced S3 operations: created buckets, uploaded objects, enabled versioning, and added a lifecycle rule to transition objects to STANDARD_IA.
+* Implemented core Coffee Cloud features:
+  * **Product Display**: Coffee menu loaded from DynamoDB
+  * **Shopping Cart**: Add/remove items with quantity management
+  * **Order Processing**: Complete order flow from cart to database
+  * **Points System**: Automatic points calculation and display
+
+* Completed end-to-end testing of user journey:
+  * New user registration → Email verification → Login → Browse menu → Add to cart → Place order → Earn points
+
+* Fixed integration issues and improved user experience:
+  * Loading states for better user feedback
+  * Input validation on both frontend and backend
+  * Proper error messages for failed operations
 
 * Deployed a simple static website to an S3 bucket and verified public access settings and bucket policy.
 

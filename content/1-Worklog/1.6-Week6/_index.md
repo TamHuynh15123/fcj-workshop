@@ -7,26 +7,49 @@ pre: " <b> 1.6. </b> "
 
 ### Week 6 Objectives:
 
-* Onboard with the First Cloud Journey team and understand internship expectations.
-* Learn AWS fundamentals: core service categories, account setup, Console and AWS CLI usage.
+* Set up AWS Amplify for Coffee Cloud frontend hosting
+* Create React.js frontend application
+* Configure CI/CD pipeline for automatic deployment
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Onboarding meeting with mentor and team; read internship rules; set communication channels (Slack/Email).                                                                                             | 13/10/2025 | 13/10/2025      | internal docs                              |
-| 3   | - Study AWS service categories (Compute, Storage, Networking, Database). Take notes and map services to use-cases; review CloudJourney modules.                                                           | 14/10/2025 | 14/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account; enable MFA on root; create an IAM admin user; install & configure AWS CLI; verify aws sts get-caller-identity.                                                          | 15/10/2025 | 15/10/2025      | AWS Console, AWS CLI docs                  |
-| 5   | - Learn EC2 components: AMIs, instance types, EBS, key pairs, security groups. Prepare key-pair and security-group rules for SSH (port 22).                                                           | 16/10/2025 | 16/10/2025      | EC2 docs                                   |
-| 6   | - Launch a t2.micro EC2 instance (Amazon Linux/Ubuntu), connect via SSH, attach an additional EBS volume, format & mount it; create snapshot for practice.                                            | 17/10/2025 | 17/10/2025      | EC2/EBS docs                               |
+| 1   | - Learn AWS Amplify fundamentals <br> - Understand Amplify hosting and CI/CD features <br> - Review React.js basics for frontend development                                                        | 05/08/2025 | 05/08/2025      | Amplify documentation                     |
+| 2   | - Create new React.js application for Coffee Cloud <br> - Set up project structure with components for: login, menu, cart, orders                                                                   | 06/08/2025 | 06/08/2025      | React.js documentation                    |
+| 3   | - Initialize Git repository for the project <br> - Push initial code to GitHub repository <br> - Set up basic routing and navigation                                                                | 07/08/2025 | 07/08/2025      | Git documentation                         |
+| 4   | - Connect React app to AWS Amplify <br> - Configure automatic deployment from GitHub <br> - Set up custom domain (if available)                                                                     | 08/08/2025 | 08/08/2025      | Amplify console guide                     |
+| 5   | - Test CI/CD pipeline by making code changes <br> - Configure environment variables for API endpoints <br> - Verify deployment success                                                              | 09/08/2025 | 09/08/2025      | Amplify deployment guide                  |
 
 
 ### Week 6 Achievements:
 
-* Gained a clear understanding of AWS core service groups and their use-cases:
-  * Compute (EC2, Lambda)
-  * Storage (S3, EBS)
-  * Networking (VPC, Subnet, Route)
-  * Database (RDS, DynamoDB)
+* Successfully created React.js frontend application for Coffee Cloud with the following features:
+  * **Login/Registration page**: User authentication interface
+  * **Menu page**: Display coffee products with prices and descriptions
+  * **Shopping cart**: Add/remove items and calculate totals
+  * **Order history**: View past orders and track status
+  * **Points system**: Display customer loyalty points
+
+* Set up AWS Amplify hosting with automatic CI/CD pipeline:
+  * Connected GitHub repository to Amplify
+  * Configured automatic deployment on code commits
+  * Set up environment-specific builds (dev/prod)
+  * Custom domain configuration ready for future use
+
+* Implemented responsive design for mobile and desktop users
+
+* Successfully tested the complete deployment process:
+  * Code changes trigger automatic builds
+  * Build logs show successful deployment
+  * Live application accessible via Amplify URL
+
+* Configured environment variables for API Gateway endpoints connection
+
+* Learned Amplify benefits for frontend developers:
+  * No server configuration required
+  * Automatic SSL certificate management
+  * Global CDN for fast content delivery
+  * Easy rollback to previous versions
 
 * Created and secured an AWS Free Tier account, including enabling MFA and creating an initial IAM user.
 

@@ -18,20 +18,32 @@ Mục tiêu tuần 5:
 | 4 | Bắt đầu dịch blog đầu tiên:<br>- Chọn blog AWS phù hợp (cơ bản)<br>- Dịch 50% nội dung<br>- Review với mentor | 9/10/2025 | 9/10/2025 | AWS Blog, Mentor guidance |
 | 5 | Làm việc nhóm và hoàn thiện:<br>- Chia sẻ tiến độ dịch blog<br>- Hoàn thiện bài dịch<br>- Planning cho workshop | 10/10/2025 | 12/10/2025 | Team collaboration |
 
-Thành tích tuần 5:
+### Thành tích tuần 5:
 
-• Có kiến thức về AWS IAM:
-  - Hiểu cách quản lý users, groups và roles
-  - Biết cách tạo và gán policies
+* Thành công tạo AWS Lambda functions cho Coffee Cloud backend:
+  * **User Registration**: Xử lý đăng ký người dùng mới với tích hợp Cognito
+  * **User Authentication**: Xác thực thông tin đăng nhập và trả về JWT tokens
+  * **Product Management**: Lấy menu cà phê từ DynamoDB
+  * **Order Processing**: Tạo đơn hàng mới và cập nhật inventory
+  * **Points System**: Tính toán và cập nhật điểm thưởng khách hàng
 
-• Phát triển kỹ năng dịch thuật:
-  - Hoàn thành bài dịch blog đầu tiên
-  - Học cách dịch thuật ngữ kỹ thuật AWS
-  - Cải thiện khả năng viết technical content
+* Thiết lập API Gateway với các RESTful endpoints:
+  * POST /api/auth/register
+  * POST /api/auth/login
+  * GET /api/products
+  * POST /api/orders
+  * GET /api/points/{userId}
 
-• Kỹ năng làm việc nhóm:
-  - Chia sẻ kinh nghiệm dịch blog với team
-  - Nhận feedback và cải thiện
-  - Đóng góp vào planning workshop
+* Cấu hình quyền Lambda function và IAM roles cho truy cập DynamoDB
+
+* Test tất cả API endpoints sử dụng Postman và xác minh xử lý lỗi đúng cách
+
+* Tìm hiểu lợi ích của serverless architecture:
+  * Không cần quản lý server
+  * Tự động scale theo nhu cầu
+  * Mô hình giá pay-per-request
+  * Tính khả dụng cao trong giới hạn AWS Free Tier
+
+* Triển khai các biện pháp bảo mật cơ bản bao gồm cấu hình CORS và xác thực input
 
 

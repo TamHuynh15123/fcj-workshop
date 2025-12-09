@@ -7,26 +7,49 @@ pre: " <b> 1.6. </b> "
 
 ### Mục tiêu tuần 6:
 
-* Hoàn tất quy trình onboarding với nhóm First Cloud Journey và nắm rõ nội quy thực tập.
-* Nắm kiến thức nền tảng về AWS: các nhóm dịch vụ chính, thiết lập tài khoản, sử dụng Console và AWS CLI.
+* Thiết lập AWS Amplify cho hosting frontend Coffee Cloud
+* Tạo ứng dụng React.js frontend
+* Cấu hình CI/CD pipeline để deploy tự động
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Họp onboarding với mentor và team; đọc các nội quy thực tập; thiết lập kênh giao tiếp (Slack/Email).                                                                                       | 13/10/2025   | 13/10/2025      | internal docs                              |
-| 3   | - Nghiên cứu các nhóm dịch vụ AWS (Compute, Storage, Networking, Database); ghi chú và map use-case; xem lại tài liệu CloudJourney.                                                          | 14/10/2025   | 14/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier; bật MFA cho tài khoản root; tạo IAM admin user; cài & cấu hình AWS CLI; kiểm tra bằng lệnh aws sts get-caller-identity.                                                | 15/10/2025   | 15/10/2025      | AWS Console, AWS CLI docs                  |
-| 5   | - Học các khái niệm EC2: AMI, instance type, EBS, key pair, security group. Chuẩn bị key-pair và security group cho SSH (port 22).                                                         | 16/10/2025   | 16/10/2025      | EC2 docs                                   |
-| 6   | - Khởi tạo EC2 t2.micro, kết nối SSH, gắn thêm EBS volume, format & mount; tạo snapshot để luyện tập.                                                                                        | 17/10/2025   | 17/10/2025      | EC2/EBS docs                               |
+### Nhiệm vụ thực hiện trong tuần:
+| Ngày | Nhiệm vụ                                                                                                                                                                                               | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo                        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| 1   | - Tìm hiểu cơ bản AWS Amplify <br> - Hiểu Amplify hosting và CI/CD features <br> - Ôn tập React.js cơ bản cho phát triển frontend                                                        | 05/08/2025 | 05/08/2025      | Tài liệu Amplify                     |
+| 2   | - Tạo ứng dụng React.js mới cho Coffee Cloud <br> - Thiết lập cấu trúc project với components cho: login, menu, cart, orders                                                                   | 06/08/2025 | 06/08/2025      | Tài liệu React.js                    |
+| 3   | - Khởi tạo Git repository cho project <br> - Push code ban đầu lên GitHub repository <br> - Thiết lập routing và navigation cơ bản                                                                | 07/08/2025 | 07/08/2025      | Tài liệu Git                         |
+| 4   | - Kết nối React app với AWS Amplify <br> - Cấu hình automatic deployment từ GitHub <br> - Thiết lập custom domain (nếu có)                                                                     | 08/08/2025 | 08/08/2025      | Hướng dẫn Amplify console                     |
+| 5   | - Test CI/CD pipeline bằng cách thay đổi code <br> - Cấu hình environment variables cho API endpoints <br> - Xác minh deployment thành công                                                              | 09/08/2025 | 09/08/2025      | Hướng dẫn Amplify deployment                  |
 
 
 ### Kết quả đạt được tuần 6:
 
-* Nắm được các nhóm dịch vụ chính của AWS và ứng dụng cơ bản:
-  * Compute (EC2, Lambda)
-  * Storage (S3, EBS)
-  * Networking (VPC, Subnet)
-  * Database (RDS, DynamoDB)
+* Thành công tạo ứng dụng React.js frontend cho Coffee Cloud với các tính năng:
+  * **Trang Login/Registration**: Giao diện xác thực người dùng
+  * **Trang Menu**: Hiển thị sản phẩm cà phê với giá và mô tả
+  * **Giỏ hàng**: Thêm/bỏ items và tính tổng tiền
+  * **Lịch sử đơn hàng**: Xem đơn hàng cũ và theo dõi trạng thái
+  * **Hệ thống điểm**: Hiển thị điểm thưởng khách hàng
+
+* Thiết lập AWS Amplify hosting với CI/CD pipeline tự động:
+  * Kết nối GitHub repository với Amplify
+  * Cấu hình automatic deployment khi commit code
+  * Thiết lập environment-specific builds (dev/prod)
+  * Cấu hình custom domain sẵn sàng cho tương lai
+
+* Implement responsive design cho người dùng mobile và desktop
+
+* Thành công test toàn bộ deployment process:
+  * Thay đổi code trigger automatic builds
+  * Build logs cho thấy deployment thành công
+  * Ứng dụng live có thể truy cập qua Amplify URL
+
+* Cấu hình environment variables để kết nối API Gateway endpoints
+
+* Tìm hiểu lợi ích của Amplify cho frontend developers:
+  * Không cần cấu hình server
+  * Quản lý SSL certificate tự động
+  * Global CDN để phân phối nội dung nhanh
+  * Dễ dàng rollback về version trước
 
 * Đã tạo và bảo mật AWS Free Tier account: bật MFA và tạo IAM user ban đầu.
 

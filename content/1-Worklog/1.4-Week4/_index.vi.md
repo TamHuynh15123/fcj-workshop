@@ -5,38 +5,44 @@ chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-Mục tiêu tuần 4:
-- Tìm hiểu về dịch vụ Networking của AWS, đặc biệt là Amazon VPC
-- Thực hành tạo và cấu hình VPC cơ bản
-- Tìm hiểu về Database services và RDS
+### Mục tiêu tuần 4:
 
-| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |
-|------|----------|--------------|---------------|-------------------|
-| 1 | Tìm hiểu về Amazon VPC:<br>- Khái niệm VPC, Subnet<br>- Internet Gateway và Route Table<br>- Security Groups vs NACLs | 29/9/2025 | 29/9/2025 | AWS Documentation, CloudJourney |
-| 2 | Thực hành tạo VPC:<br>- Tạo custom VPC<br>- Cấu hình public và private subnet<br>- Gắn Internet Gateway | 30/9/2025 | 1/10/2025 | AWS Console |
-| 3 | Tìm hiểu Amazon RDS:<br>- Các loại database engine<br>- Multi-AZ và Read Replica<br>- Backup và Security | 2/10/2025 | 2/10/2025 | AWS Documentation |
-| 4 | Kết nối EC2 với RDS:<br>- Launch EC2 trong VPC<br>- Tạo RDS instance<br>- Cấu hình security group để kết nối | 3/10/2025 | 3/10/2025 | AWS Console |
-| 5 | Làm việc nhóm:<br>- Chia sẻ kiến thức đã học<br>- Thảo luận về tiến độ dự án<br>- Planning cho tuần tiếp theo | 4/10/2025 | 5/10/2025 | Team meeting |
+* Thiết lập database DynamoDB cho dự án Coffee Cloud
+* Tìm hiểu cơ bản về DynamoDB và tạo bảng cho dữ liệu người dùng và đơn hàng
+* Thiết lập AWS Cognito cho xác thực người dùng
 
-Thành tích tuần 4:
+### Nhiệm vụ thực hiện trong tuần:
+| Ngày | Nhiệm vụ                                                                                                                                                                                               | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo                        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| 1   | - Tìm hiểu cơ bản DynamoDB <br> - Hiểu khái niệm NoSQL, primary keys, và indexes                                                                                                                     | 22/07/2025 | 22/07/2025      | Tài liệu DynamoDB                         |
+| 2   | - Tạo bảng DynamoDB cho Coffee Cloud: <br>&emsp; + Bảng Users <br>&emsp; + Bảng Products <br>&emsp; + Bảng Orders <br>&emsp; + Bảng Points                                                        | 23/07/2025 | 23/07/2025      | Hướng dẫn DynamoDB console                |
+| 3   | - Cấu hình schema bảng và indexes <br> - Thêm dữ liệu mẫu để test <br> - Thực hành các thao tác CRUD cơ bản                                                                                        | 24/07/2025 | 24/07/2025      | Tài liệu DynamoDB SDK                     |
+| 4   | - Tìm hiểu AWS Cognito cho xác thực người dùng <br> - Hiểu User Pools và Identity Pools                                                                                                              | 25/07/2025 | 25/07/2025      | Tài liệu Cognito                          |
+| 5   | - Tạo Cognito User Pool cho Coffee Cloud <br> - Cấu hình thiết lập sign-up/sign-in <br> - Thiết lập user groups (Customer, Shipper, Admin)                                                        | 26/07/2025 | 26/07/2025      | Hướng dẫn Cognito console                 |
 
-• Có kiến thức cơ bản về Amazon VPC:
+### Thành tích tuần 4:
 
-  - Tạo public và private subnet
-  - Biết cách cấu hình routing và security
+* Thành công tạo các bảng DynamoDB cho dự án Coffee Cloud:
+  * **Bảng Users**: Lưu thông tin customer, shipper, và admin
+  * **Bảng Products**: Menu cà phê với giá cả và mô tả
+  * **Bảng Orders**: Chi tiết đơn hàng và theo dõi trạng thái
+  * **Bảng Points**: Hệ thống điểm thưởng khách hàng
 
-• Có kiến thức cơ bản về Amazon RDS:
-  - Nắm được khái niệm Multi-AZ và Read Replica
-  - Biết cách backup và bảo mật database
+* Cấu hình primary keys và secondary indexes phù hợp để query hiệu quả
 
-• Thực hành thành công:
-  - Tạo VPC với multiple subnets
-  - Kết nối EC2 với RDS trong VPC
-  - Cấu hình security groups phù hợp
+* Thêm dữ liệu mẫu vào tất cả bảng để phục vụ testing
 
-• Kỹ năng làm việc nhóm:
-  - Chia sẻ kiến thức hiệu quả với teammates
-  - Đóng góp ý kiến cho project planning
-  - Hỗ trợ các thành viên khác trong nhóm
+* Thành công thiết lập AWS Cognito User Pool với cấu hình:
+  * Đăng nhập bằng email
+  * Chính sách mật khẩu bảo mật
+  * Ba user groups: Customer, Shipper, Admin
+  * Xác thực email cho tài khoản mới
+
+* Test các thao tác DynamoDB cơ bản sử dụng AWS console:
+  * Thao tác tạo, đọc, cập nhật, xóa
+  * Query và scan operations
+  * Hiểu về capacity units và billing
+
+* Học DynamoDB best practices để tối ưu chi phí trong giới hạn Free Tier
 
 

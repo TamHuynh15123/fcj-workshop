@@ -7,26 +7,56 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10:
 
-* Tìm hiểu giám sát và audit với CloudWatch và CloudTrail.
-* Tạo IAM role cho dịch vụ và viết policy theo nguyên tắc least-privilege.
+* Hoàn thiện ứng dụng Coffee Cloud và chuẩn bị cho demo
+* Tiến hành final testing và sửa lỗi
+* Tạo tài liệu và materials cho presentation
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Đọc về CloudWatch & CloudTrail; lên kế hoạch các tài nguyên cần monitor.                                                                                                                 | 10/11/2025   | 10/11/2025      | CloudWatch & CloudTrail docs               |
-| 3   | - Cài đặt và cấu hình CloudWatch Agent trên EC2; thu thập metrics hệ thống và ứng dụng (CPU, memory, disk).                                                                                 | 11/11/2025   | 11/11/2025      | CloudWatch agent guide                     |
-| 4   | - Tạo dashboard CloudWatch: thêm widgets cho EC2 và RDS; thêm biểu đồ custom metric cho ứng dụng.                                                                                          | 12/11/2025   | 12/11/2025      | CloudWatch dashboards docs                 |
-| 5   | - Định nghĩa CloudWatch alarms (CPU, memory qua agent, disk) và tạo SNS topic để nhận cảnh báo; test trigger alarm.                                                                          | 13/11/2025   | 13/11/2025      | CloudWatch Alarms & SNS docs               |
-| 6   | - Bật CloudTrail, cấu hình trail tới S3, kiểm tra logs cho hoạt động console và API; rà soát các event nghi vấn.                                                                             | 14/11/2025   | 14/11/2025      | CloudTrail docs                            |
+### Nhiệm vụ thực hiện trong tuần:
+| Ngày | Nhiệm vụ                                                                                                                                                                                               | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo                        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| 1   | - Tiến hành final end-to-end testing của Coffee Cloud <br> - Sửa các bugs hoặc issues còn lại <br> - Xác minh tất cả features hoạt động như mong đợi                                              | 02/09/2025 | 02/09/2025      | Testing checklist                         |
+| 2   | - Tối ưu ứng dụng cho demo presentation <br> - Chuẩn bị sample data và test scenarios <br> - Đảm bảo hiệu suất ổn định trong demo                                                            | 03/09/2025 | 03/09/2025      | Demo preparation guide                    |
+| 3   | - Tạo tài liệu toàn diện: <br>&emsp; + Architecture diagrams <br>&emsp; + User guides <br>&emsp; + Technical documentation                                                              | 04/09/2025 | 04/09/2025      | Documentation templates                   |
+| 4   | - Chuẩn bị presentation materials <br> - Tạo demo script và walkthrough <br> - Luyện tập presentation delivery                                                                                     | 05/09/2025 | 05/09/2025      | Presentation guidelines                    |
+| 5   | - Final review và cleanup <br> - Xác minh tất cả AWS resources được cấu hình đúng <br> - Chuẩn bị cho project handover và demo                                                                    | 06/09/2025 | 06/09/2025      | Project review checklist                  |
 
 
 ### Kết quả đạt được tuần 10:
 
-* Thiết lập CloudWatch metrics và dashboard để giám sát EC2, RDS và metric ứng dụng.
+* Hoàn thành final testing toàn diện của ứng dụng Coffee Cloud:
+  * **Functional Testing**: Xác minh tất cả user flows hoạt động chính xác
+  * **Performance Testing**: Đảm bảo response times chấp nhận được
+  * **Security Testing**: Kiểm tra authentication và data protection
+  * **Bug Fixes**: Giải quyết tất cả issues criticals được phát hiện
 
-* Tạo CloudWatch Alarms cho CPU, memory (sử dụng agent) và disk usage; cấu hình SNS để gửi thông báo.
+* Chuẩn bị demo presentation chuyên nghiệp:
+  * **Sample Data**: Tạo realistic test data cho demo scenarios
+  * **Demo Script**: Walkthrough từng tính năng một cách mạch lạc
+  * **Performance Optimization**: Đảm bảo ứng dụng chạy mượt mà trong demo
 
-* Kích hoạt CloudTrail để ghi lại hoạt động API và lưu trữ log vào S3.
+* Tạo documentation hoàn chỉnh cho dự án:
+  * **Architecture Diagrams**: Sơ đồ hệ thống và data flow 
+  * **User Manual**: Hướng dẫn sử dụng cho end-users
+  * **Technical Documentation**: API specs và deployment guide
+  * **Project Report**: Tổng hợp achievements và lessons learned
+
+* Presentation materials và delivery skills:
+  * **Slide Deck**: Professional presentation với clear messaging
+  * **Live Demo**: Prepared demo scenarios với backup plans
+  * **Q&A Preparation**: Sẵn sàng trả lời technical questions
+
+* Project finalization và handover:
+  * **Code Organization**: Clean, well-documented codebase
+  * **AWS Resources**: Proper tagging và documentation
+  * **Knowledge Transfer**: Comprehensive handover materials
+  * **Post-Demo Plan**: Cleanup strategy và next steps
+
+* Key achievements summary:
+  * Thành công deploy full-stack web application trên AWS
+  * Sử dụng hiệu quả AWS Free Tier services
+  * Đạt được serverless architecture với high availability
+  * Tích hợp multiple AWS services seamlessly
+  * Tạo ra một sản phẩm thực tế có thể sử dụng được
 
 * Tạo IAM role cho EC2 và role cho automation với quyền giới hạn.
 

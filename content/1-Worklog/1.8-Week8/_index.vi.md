@@ -7,26 +7,54 @@ pre: " <b> 1.8. </b> "
 
 ### Mục tiêu tuần 8:
 
-* Tìm hiểu mạng lưới AWS: VPC, subnet, route table, Internet Gateway, NAT, Security Group và NACL.
-* Triển khai tài nguyên trong VPC và thực hành mẫu kết nối an toàn (bastion host).
+* Thiết lập dịch vụ notification (SNS và SES) cho Coffee Cloud
+* Triển khai email notifications cho đơn hàng và khuyến mãi
+* Thêm push notifications cho cập nhật trạng thái đơn hàng
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Lên kế hoạch CIDR và sơ đồ subnet (public/private); ghi chú lý do chọn CIDR.                                                                                                              | 27/10/2025   | 27/10/2025      | VPC docs                                    |
-| 3   | - Tạo VPC với public và private subnets; cấu hình route table và gắn Internet Gateway cho public subnet.                                                                                    | 28/10/2025   | 28/10/2025      | VPC guide                                   |
-| 4   | - Thiết lập private subnet và NAT Gateway (hoặc NAT instance); kiểm tra kết nối outbound từ instances trong private subnet.                                                                 | 29/10/2025   | 29/10/2025      | NAT docs                                    |
-| 5   | - Thiết kế và áp dụng Security Groups & Network ACLs; tạo rule chỉ mở traffic cần thiết (SSH qua bastion, HTTP/HTTPS, port DB).                                                            | 30/10/2025   | 30/10/2025      | Security groups docs                        |
-| 6   | - Triển khai bastion host trên public subnet; thử SSH proxy tới private EC2; vẽ sơ đồ mạng và ghi lại note debug.                                                                           | 31/10/2025   | 31/10/2025      | VPC/SSH best practices                      |
+### Nhiệm vụ thực hiện trong tuần:
+| Ngày | Nhiệm vụ                                                                                                                                                                                               | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo                        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| 1   | - Tìm hiểu AWS SNS (Simple Notification Service) cơ bản <br> - Hiểu topics, subscriptions, và message formats <br> - Tạo SNS topic cho order notifications                                   | 19/08/2025 | 19/08/2025      | Tài liệu SNS                         |
+| 2   | - Thiết lập AWS SES (Simple Email Service) <br> - Xác minh email domain/address <br> - Tạo email templates cho order confirmations                                                                     | 20/08/2025 | 20/08/2025      | Tài liệu SES                         |
+| 3   | - Tích hợp SNS với Lambda functions <br> - Gửi notifications khi orders được tạo/cập nhật <br> - Test notification delivery                                                                    | 21/08/2025 | 21/08/2025      | Lambda + SNS integration                  |
+| 4   | - Triển khai email notifications với SES <br> - Gửi order confirmation emails <br> - Tạo promotional email templates                                                                             | 22/08/2025 | 22/08/2025      | SES email templates                       |
+| 5   | - Test toàn bộ notification flow <br> - Xác minh email delivery và formatting <br> - Test SMS notifications (tùy chọn)                                                                              | 23/08/2025 | 23/08/2025      | End-to-end notification testing           |
 
 
 ### Kết quả đạt được tuần 8:
 
-* Thiết kế và tạo VPC gồm public và private subnets, cấu hình route table và Internet Gateway.
+* Thành công cấu hình AWS SNS cho Coffee Cloud notifications:
+  * Tạo SNS topics cho các loại notification khác nhau (orders, promotions, alerts)
+  * Thiết lập email subscriptions cho admin notifications
+  * Cấu hình topic policies để truy cập an toàn từ Lambda functions
 
-* Khởi tạo EC2 trong public/private subnet và kiểm tra kết nối qua bastion host/SSH proxy.
+* Triển khai AWS SES cho email communications:
+  * Xác minh sender email address cho development
+  * Tạo professional email templates cho:
+    - Email xác nhận đơn hàng
+    - Email chào mừng người dùng mới
+    - Newsletter khuyến mãi
+    - Email reset mật khẩu
 
-* Cấu hình Security Groups và Network ACLs để giới hạn lưu lượng theo nguyên tắc least-privilege.
+* Tích hợp notification services với Lambda functions:
+  * Tạo đơn hàng trigger email xác nhận tự động
+  * Cập nhật trạng thái đơn hàng gửi notifications real-time
+  * Admin nhận alerts cho đơn hàng mới và system issues
+
+* Nâng cao trải nghiệm người dùng Coffee Cloud:
+  * Khách hàng nhận xác nhận đơn hàng ngay lập tức
+  * Cập nhật real-time về chuẩn bị và giao hàng
+  * Email templates chuyên nghiệp với branding Coffee Cloud
+
+* Test độ tin cậy notification:
+  * Email delivery hoạt động trong giới hạn SES sandbox
+  * Xử lý lỗi phù hợp cho failed notifications
+  * Monitor notification logs qua CloudWatch
+
+* Học AWS communication services best practices:
+  * Hiểu SES sandbox vs production mode
+  * SNS pricing và message limits
+  * IAM permissions phù hợp cho notification services
 
 * Áp dụng NAT gateway để cho phép instances trong private subnet truy cập internet khi cần.
 

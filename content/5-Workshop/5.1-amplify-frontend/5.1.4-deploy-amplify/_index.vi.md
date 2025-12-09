@@ -227,9 +227,7 @@ Click **Download build logs** để lưu logs về máy
    - Xác minh quyền sở hữu domain
    - Chờ SSL certificate (15-30 phút)
 
-{{% notice warning %}}
-⚠️ **Lưu ý**: Custom domain yêu cầu bạn đã sở hữu domain. Nếu chưa có, bỏ qua bước này.
-{{% /notice %}}
+
 
 ---
 
